@@ -7,6 +7,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -19,17 +20,16 @@ public class HelloJavaFX extends Application {
 		// Creating a Text node object
 		// A node is a visual/graphical object e.g. button
 		Text myText = new Text();
-
-		Button myButton = new Button("My Button was clicked");
+		TextArea myOutput = new TextArea();
 		
+		Button myButton = new Button("My Button was clicked");
 		myButton.setOnAction(new EventHandler<ActionEvent>() {
 			 
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
+            	myOutput.setText("test\n");
             }
         });
-		
 		
 		// Setting the text to be added.
 		myText.setText("Hello JavaFX!");
@@ -55,7 +55,8 @@ public class HelloJavaFX extends Application {
 		// Arranging all the nodes in the grid
 		myGridPane.add(myText, 0, 0);
 		myGridPane.add(myButton, 1, 0);
-
+		myGridPane.add(myOutput, 1, 1);
+		
 		/* Preparing the Scene */
 		// Create a Scene by passing the root group object, height and width
 		Scene scene = new Scene(myGridPane, 600, 300);
