@@ -27,7 +27,7 @@ public class HelloJavaFX extends Application {
 			 
             @Override
             public void handle(ActionEvent event) {
-            	myOutput.setText("test\n");
+            	myOutput.setText(myOutput.getText() + "test\n");
             }
         });
 		
