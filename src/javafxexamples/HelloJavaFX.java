@@ -3,6 +3,8 @@ package javafxexamples;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -16,6 +18,9 @@ public class HelloJavaFX extends Application {
 		// Setting the text to be added.
 		myText.setText("Hello JavaFX!");
 
+		// Setting the size of the text
+		myText.setFont(new Font(45));
+
 		// Creating a Stack Pane
 		// The stack pane layout arranges the nodes in our application on top of
 		// one another just like in a stack.
@@ -26,10 +31,12 @@ public class HelloJavaFX extends Application {
 		// The getChildren() method gives you an object of the ObservableList
 		// class which holds the nodes. We must retrieve this object and then
 		// add nodes to it as shown above.
-		
+
 		/* Preparing the Scene */
-		// Create a Scene by passing the root group object
-		Scene scene = new Scene(myStackPane);
+		// Create a Scene by passing the root group object, height and width
+		Scene scene = new Scene(myStackPane, 600, 300);
+		// setting color to the scene
+		scene.setFill(Color.RED);
 
 		/* Preparing the Stage (i.e. the container of any JavaFX application) */
 		// Setting the title to Stage.
