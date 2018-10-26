@@ -1,6 +1,8 @@
 package javafxexamples;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -18,8 +20,17 @@ public class HelloJavaFX extends Application {
 		// A node is a visual/graphical object e.g. button
 		Text myText = new Text();
 
-		Button myButton = new Button("Click Me");
-
+		Button myButton = new Button("My Button was clicked");
+		
+		myButton.setOnAction(new EventHandler<ActionEvent>() {
+			 
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("Hello World!");
+            }
+        });
+		
+		
 		// Setting the text to be added.
 		myText.setText("Hello JavaFX!");
 
