@@ -20,12 +20,15 @@ public class JavafxCounter extends Application {
 		Label countLabel = new Label("Count: ");
 		TextField tfCount = new TextField("0");
 		Button btnCount = new Button("Count");
+		Button btnDecrement = new Button("Decrement");
 
 		// Set Text Field to be non-editable
 		tfCount.setEditable(false);
 
 		// Register event handler using Lambda Expression (JDK 8)
 		btnCount.setOnAction(event -> tfCount.setText(Integer.toString(++counter)));
+		// Register event handler using Lambda Expression (JDK 8)
+		btnDecrement.setOnAction(event -> tfCount.setText(Integer.toString(--counter)));
 
 		// Create a scene graph of node rooted at a FlowPane
 		FlowPane flow = new FlowPane();
@@ -33,7 +36,7 @@ public class JavafxCounter extends Application {
 		flow.setVgap(10); // Vertical gap between nodes in pixels
 		flow.setHgap(10); // Horizontal gap between nodes in pixels
 		flow.setAlignment(Pos.CENTER); // Alignment
-		flow.getChildren().addAll(countLabel, tfCount, btnCount);
+		flow.getChildren().addAll(countLabel, tfCount, btnCount, btnDecrement);
 
 		// Setup scene and stage
 		primaryStage.setScene(new Scene(flow, 400, 80));
