@@ -1,5 +1,5 @@
 package javafxexamples;
-
+// https://docs.oracle.com/javafx/2/scenegraph/jfxpub-scenegraph.htm
 import javafx.animation.FillTransition;
 import javafx.animation.ParallelTransition;
 import javafx.animation.RotateTransition;
