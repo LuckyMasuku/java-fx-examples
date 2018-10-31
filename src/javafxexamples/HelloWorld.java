@@ -7,6 +7,8 @@ public class HelloWorld extends Application{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		// Setting the title for the primary Stage
+		primaryStage.setTitle("Title for Primary Stage");	
 		// Show the primary stage
 		primaryStage.show();
 	}
