@@ -3,6 +3,7 @@ package javafxexamples;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -15,9 +16,9 @@ public class GridPaneExample extends Application {
 		Button button1 = new Button("Button 1");
 		Button button2 = new Button("Button 2");
 		Button button3 = new Button("Button 3");
-		Button button4 = new Button("Button 4");
-		Button button5 = new Button("Button 5");
-		Button button6 = new Button("Button 6");
+		TextField text1 = new TextField("Button 1 Output");
+		TextField text2 = new TextField("Button 2 Output");
+		TextField text3 = new TextField("Button 3 Output");
 
 		GridPane gridPane = new GridPane();
 		
@@ -28,9 +29,9 @@ public class GridPaneExample extends Application {
 		gridPane.add(button1, 0, 0, 1, 1);
 		gridPane.add(button2, 1, 0, 1, 1);
 		gridPane.add(button3, 2, 0, 1, 1);
-		gridPane.add(button4, 0, 1, 1, 1);
-		gridPane.add(button5, 1, 1, 1, 1);
-		gridPane.add(button6, 2, 1, 1, 1);
+		gridPane.add(text1, 0, 1, 1, 1);
+		gridPane.add(text2, 1, 1, 1, 1);
+		gridPane.add(text3, 2, 1, 1, 1);
 
 		Scene scene = new Scene(gridPane, 240, 100);
 		primaryStage.setScene(scene);
