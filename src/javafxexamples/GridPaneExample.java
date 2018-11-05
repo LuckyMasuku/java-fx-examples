@@ -26,13 +26,19 @@ public class GridPaneExample extends Application {
 		gridPane.setHgap(10);
 		gridPane.setVgap(10);
 		
+		// gridPane.add(Node, Column, Row, numColumns, numRows)
 		gridPane.add(button1, 0, 0, 1, 1);
 		gridPane.add(button2, 1, 0, 1, 1);
 		gridPane.add(button3, 2, 0, 1, 1);
 		gridPane.add(text1, 0, 1, 1, 1);
 		gridPane.add(text2, 1, 1, 1, 1);
 		gridPane.add(text3, 2, 1, 1, 1);
-
+		
+		// Register event handler using Lambda Expression (JDK 8)
+		button1.setOnAction(event -> text1.setText("Button 1 Pressed"));
+		
+		
+		
 		Scene scene = new Scene(gridPane, 500, 100);
 		primaryStage.setScene(scene);
 		primaryStage.show();
