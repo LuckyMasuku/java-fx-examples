@@ -33,7 +33,7 @@ public class GridPaneExample extends Application {
 		gridPane.add(text2, 1, 1, 1, 1);
 		gridPane.add(text3, 2, 1, 1, 1);
 
-		Scene scene = new Scene(gridPane, 240, 100);
+		Scene scene = new Scene(gridPane, 500, 100);
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
