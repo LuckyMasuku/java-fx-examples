@@ -21,7 +21,9 @@ public class JavafxCounter extends Application {
 		TextField tfCount = new TextField("0");
 		Button btnCount = new Button("Count");
 		Button btnDecrement = new Button("Decrement");
-
+		Button btnReset = new Button("Reset");
+		
+		
 		// Set Text Field to be non-editable
 		tfCount.setEditable(false);
 
@@ -29,17 +31,17 @@ public class JavafxCounter extends Application {
 		btnCount.setOnAction(event -> tfCount.setText(Integer.toString(++counter)));
 		// Register event handler using Lambda Expression (JDK 8)
 		btnDecrement.setOnAction(event -> tfCount.setText(Integer.toString(--counter)));
-
+		btnReset.setOnAction(event -> tfCount.setText(Integer.toString(counter=0)));
 		// Create a scene graph of node rooted at a FlowPane
 		FlowPane flow = new FlowPane();
 		flow.setPadding(new Insets(15, 12, 15, 12)); // top, right, bottom, left
 		flow.setVgap(10); // Vertical gap between nodes in pixels
 		flow.setHgap(10); // Horizontal gap between nodes in pixels
 		flow.setAlignment(Pos.CENTER); // Alignment
-		flow.getChildren().addAll(countLabel, tfCount, btnCount, btnDecrement);
+		flow.getChildren().addAll(countLabel, tfCount, btnCount, btnDecrement, btnReset);
 
 		// Setup scene and stage
-		primaryStage.setScene(new Scene(flow, 400, 80));
+		primaryStage.setScene(new Scene(flow, 600, 100));
 		primaryStage.setTitle("JavaFX Counter");
 		primaryStage.show();
 	}
