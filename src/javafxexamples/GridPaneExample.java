@@ -20,7 +20,11 @@ public class GridPaneExample extends Application {
 		Button button6 = new Button("Button 6");
 
 		GridPane gridPane = new GridPane();
-
+		
+		//Add Horizontal and Vertical Spacing
+		gridPane.setHgap(10);
+		gridPane.setVgap(10);
+		
 		gridPane.add(button1, 0, 0, 1, 1);
 		gridPane.add(button2, 1, 0, 1, 1);
 		gridPane.add(button3, 2, 0, 1, 1);
