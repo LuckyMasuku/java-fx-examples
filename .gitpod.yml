@@ -4,3 +4,7 @@ tasks:
   - command: "mvn package && mvn exec:java"
 ports:
   - port: 6080
+vscode:
+  extensions:
+    - VisualStudioExptTeam.vscodeintellicode@1.1.9:osawgVS7+7lo2813SXOJng==
+    - redhat.java@0.48.0:EYoPv4qnT0DNzzvQHYmZow==
